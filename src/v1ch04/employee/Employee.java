@@ -1,6 +1,8 @@
 package v1ch04.employee;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 /**
@@ -93,7 +95,21 @@ public class Employee {
 
     @Override
     public String toString() {
-        return "ID: " + id + ", Name: " + name + ", Salary: " + getSalary() + ", hireDay: " + hireDay;
+        return "[ID: " + id + ", Name: " + name + ", Salary: " + getSalary() + ", hireDay: " + hireDay + "]";
+    }
+
+    public static List<Employee> getEmployees() {
+
+//        return new ArrayList<Employee>() {{
+//                new Employee("Cral", 75000, 1987, 12, 5);
+//                new Employee("Garey", 60000, 1987, 1, 20);
+//                new Employee("Tommy", 85000, 1993, 6, 5);
+//            }};
+        List<Employee> employees = new ArrayList<>();
+        employees.add(new Employee("Cral", 75000, 1987, 12, 5));
+        employees.add(new Employee("Garey", 60000, 1987, 1, 20));
+        employees.add(new Employee("Tommy", 85000, 1993, 6, 5));
+        return employees;
     }
 
 }
